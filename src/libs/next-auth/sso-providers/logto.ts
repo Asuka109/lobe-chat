@@ -33,16 +33,13 @@ function LobeLogtoProvider(config: OIDCUserConfig<LogtoProfile>): OIDCConfig<Log
   };
 }
 
-export const logto = {
-  id: 'logto',
-  provider: LobeLogtoProvider({
-    authorization: {
-      params: { scope: 'openid offline_access profile email' },
-    },
-    // You can get the issuer value from the Logto Application Details page,
-    // in the field "Issuer endpoint"
-    clientId: authEnv.LOGTO_CLIENT_ID ?? process.env.AUTH_LOGTO_ID,
-    clientSecret: authEnv.LOGTO_CLIENT_SECRET ?? process.env.AUTH_LOGTO_SECRET,
-    issuer: authEnv.LOGTO_ISSUER ?? process.env.AUTH_LOGTO_ISSUER,
-  }),
-};
+export const logto = LobeLogtoProvider({
+  authorization: {
+    params: { scope: 'openid offline_access profile email' },
+  },
+  // You can get the issuer value from the Logto Application Details page,
+  // in the field "Issuer endpoint"
+  clientId: authEnv.LOGTO_CLIENT_ID ?? process.env.AUTH_LOGTO_ID,
+  clientSecret: authEnv.LOGTO_CLIENT_SECRET ?? process.env.AUTH_LOGTO_SECRET,
+  issuer: authEnv.LOGTO_ISSUER ?? process.env.AUTH_LOGTO_ISSUER,
+});

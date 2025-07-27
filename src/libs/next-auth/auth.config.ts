@@ -10,7 +10,7 @@ export const initSSOProviders = () => {
         const providerKey = provider.trim();
         const validProvider = ssoProviders[providerKey];
 
-        if (validProvider) return validProvider.provider;
+        if (validProvider) return validProvider;
 
         throw new Error(`[NextAuth] provider ${providerKey} is not supported`);
       })
