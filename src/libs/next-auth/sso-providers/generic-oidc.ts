@@ -13,7 +13,7 @@ export type GenericOIDCProfile = {
   username?: string;
 };
 
-const provider = {
+export const genericOIDC = {
   id: 'generic-oidc',
   provider: {
     ...CommonProviderConfig,
@@ -36,5 +36,3 @@ const provider = {
     type: 'oidc',
   } satisfies OIDCConfig<GenericOIDCProfile>,
 };
-
-export default provider;

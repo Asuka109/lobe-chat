@@ -3,7 +3,7 @@ import MicrosoftEntraID from 'next-auth/providers/microsoft-entra-id';
 import { getMicrosoftEntraIdIssuer } from './microsoft-entra-id-helper';
 import { CommonProviderConfig } from './sso.config';
 
-const provider = {
+export const microsoftEntraID = {
   id: 'microsoft-entra-id',
   provider: MicrosoftEntraID({
     ...CommonProviderConfig,
@@ -15,5 +15,3 @@ const provider = {
     issuer: getMicrosoftEntraIdIssuer(),
   }),
 };
-
-export default provider;

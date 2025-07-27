@@ -5,7 +5,7 @@ import { authEnv } from '@/config/auth';
 import { getMicrosoftEntraIdIssuer } from './microsoft-entra-id-helper';
 import { CommonProviderConfig } from './sso.config';
 
-const provider = {
+export const azureAD = {
   id: 'azure-ad',
   provider: AzureAD({
     ...CommonProviderConfig,
@@ -29,5 +29,3 @@ const provider = {
     // },
   }),
 };
-
-export default provider;

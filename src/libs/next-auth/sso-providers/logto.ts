@@ -33,7 +33,7 @@ function LobeLogtoProvider(config: OIDCUserConfig<LogtoProfile>): OIDCConfig<Log
   };
 }
 
-const provider = {
+export const logto = {
   id: 'logto',
   provider: LobeLogtoProvider({
     authorization: {
@@ -46,5 +46,3 @@ const provider = {
     issuer: authEnv.LOGTO_ISSUER ?? process.env.AUTH_LOGTO_ISSUER,
   }),
 };
-
-export default provider;

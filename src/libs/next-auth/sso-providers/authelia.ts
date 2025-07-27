@@ -15,7 +15,7 @@ export type AutheliaProfile = {
   sub: string; // The users id
 };
 
-const provider = {
+export const authelia = {
   id: 'authelia',
   provider: {
     ...CommonProviderConfig,
@@ -37,5 +37,3 @@ const provider = {
     type: 'oidc',
   } satisfies OIDCConfig<AutheliaProfile>,
 };
-
-export default provider;

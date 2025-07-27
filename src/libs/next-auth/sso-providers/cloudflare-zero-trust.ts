@@ -10,7 +10,7 @@ export type CloudflareZeroTrustProfile = {
   sub: string;
 };
 
-const provider = {
+export const cloudflareZeroTrust = {
   id: 'cloudflare-zero-trust',
   provider: {
     ...CommonProviderConfig,
@@ -33,5 +33,3 @@ const provider = {
     type: 'oidc',
   } satisfies OIDCConfig<CloudflareZeroTrustProfile>,
 };
-
-export default provider;

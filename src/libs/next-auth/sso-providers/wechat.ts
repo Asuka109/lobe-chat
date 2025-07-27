@@ -2,7 +2,7 @@ import WeChat, { WeChatProfile } from '@auth/core/providers/wechat';
 
 import { CommonProviderConfig } from './sso.config';
 
-const provider = {
+export const wechat = {
   id: 'wechat',
   provider: WeChat({
     ...CommonProviderConfig,
@@ -32,5 +32,3 @@ const provider = {
     },
   }),
 };
-
-export default provider;

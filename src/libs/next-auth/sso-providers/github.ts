@@ -4,7 +4,7 @@ import { authEnv } from '@/config/auth';
 
 import { CommonProviderConfig } from './sso.config';
 
-const provider = {
+export const github = {
   id: 'github',
   provider: GitHub({
     ...CommonProviderConfig,
@@ -25,5 +25,3 @@ const provider = {
     },
   }),
 };
-
-export default provider;

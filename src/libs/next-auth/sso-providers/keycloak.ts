@@ -2,7 +2,7 @@ import Keycloak from 'next-auth/providers/keycloak';
 
 import { CommonProviderConfig } from './sso.config';
 
-const provider = {
+export const keycloak = {
   id: 'keycloak',
   provider: Keycloak({
     ...CommonProviderConfig,
@@ -21,5 +21,3 @@ const provider = {
     },
   }),
 };
-
-export default provider;

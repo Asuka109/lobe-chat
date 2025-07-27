@@ -2,7 +2,7 @@ import Google from 'next-auth/providers/google';
 
 import { CommonProviderConfig } from './sso.config';
 
-const provider = {
+export const google = {
   id: 'google',
   provider: Google({
     ...CommonProviderConfig,
@@ -16,5 +16,3 @@ const provider = {
     clientSecret: process.env.AUTH_GOOGLE_CLIENT_SECRET,
   }),
 };
-
-export default provider;

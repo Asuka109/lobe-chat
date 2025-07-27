@@ -5,7 +5,7 @@ import { UserModel } from '@/database/models/user';
 import { serverDB } from '@/database/server';
 import { AgentService } from '@/server/services/agent';
 
-const provider = {
+export const bypass = {
   id: 'bypass',
   provider: Credential({
     async authorize() {
@@ -43,5 +43,3 @@ const provider = {
     name: 'Development Bypass',
   }),
 };
-
-export default provider;

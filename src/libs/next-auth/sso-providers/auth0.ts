@@ -4,7 +4,7 @@ import { authEnv } from '@/config/auth';
 
 import { CommonProviderConfig } from './sso.config';
 
-const provider = {
+export const auth0 = {
   id: 'auth0',
   provider: Auth0({
     ...CommonProviderConfig,
@@ -27,5 +27,3 @@ const provider = {
     },
   }),
 };
-
-export default provider;

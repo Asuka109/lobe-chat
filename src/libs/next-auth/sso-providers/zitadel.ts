@@ -2,7 +2,7 @@ import Zitadel from 'next-auth/providers/zitadel';
 
 import { authEnv } from '@/config/auth';
 
-const provider = {
+export const zitadel = {
   id: 'zitadel',
   provider: Zitadel({
     // Available scopes in ZITADEL: https://zitadel.com/docs/apis/openidoauth/scopes
@@ -24,5 +24,3 @@ const provider = {
     // },
   }),
 };
-
-export default provider;

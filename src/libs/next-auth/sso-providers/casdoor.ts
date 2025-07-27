@@ -35,7 +35,7 @@ function LobeCasdoorProvider(config: OIDCUserConfig<CasdoorProfile>): OIDCConfig
   };
 }
 
-const provider = {
+export const casdoor = {
   id: 'casdoor',
   provider: LobeCasdoorProvider({
     authorization: {
@@ -46,5 +46,3 @@ const provider = {
     issuer: process.env.AUTH_CASDOOR_ISSUER,
   }),
 };
-
-export default provider;
